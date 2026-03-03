@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Shaky Razor Barbershop - San Ramon's Premier Barbershop Since 2017. Classic cuts, precision fades, and straight razor shaves.">
+    <meta name="keywords" content="barbershop, San Ramon, haircut, fade, shave, barber">
+    <title>The Shaky Razor Barbershop | San Ramon, CA</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/Logo.PNG">
+</head>
+<body>
+    <!-- ========================================
+         HEADER / NAVIGATION
+    ======================================== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">
+                <img src="images/Logo.PNG" alt="The Shaky Razor Barbershop Logo" class="nav__logo-img">
+            </a>
+
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#barbers" class="nav__link">Barbers</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+                <a href="https://www.vagaro.com/theshakyrazorbarbershop" class="btn btn--primary nav__btn" target="_blank" rel="noopener noreferrer">
+                    Book Now
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========================================
+             HERO SECTION
+        ======================================== -->
+        <section class="hero" id="home">
+            <div class="hero__content container">
+                <img src="images/Logo.PNG" alt="The Shaky Razor Barbershop" class="hero__logo fade-in">
+                <p class="hero__tagline fade-in">San Ramon's Premier Barbershop Since 2017</p>
+                <a href="https://www.vagaro.com/theshakyrazorbarbershop" class="btn btn--primary btn--large fade-in" target="_blank" rel="noopener noreferrer">
+                    Book Your Cut
+                </a>
+            </div>
+        </section>
+
+        <!-- ========================================
+             MEET THE BARBERS SECTION
+        ======================================== -->
+        <section class="barbers section" id="barbers">
+            <div class="container">
+                <h2 class="section__title fade-in">Meet the Barbers</h2>
+                <p class="section__subtitle fade-in">The skilled hands behind every great cut</p>
+
+                <div class="barbers__grid">
+                    <!-- BARBER CARD: Gregory Rocha -->
+                    <article class="barber-card fade-in" data-barber="gregory" tabindex="0" role="button" aria-label="View Gregory Rocha's profile">
+                        <div class="barber-card__image-wrapper">
+                            <img src="images/barbers/Gregory.png" alt="Gregory Rocha - Owner & Head Barber" class="barber-card__image" loading="lazy">
+                        </div>
+                        <div class="barber-card__info">
+                            <h3 class="barber-card__name">Gregory Rocha</h3>
+                            <p class="barber-card__title">Owner & Head Barber</p>
+                        </div>
+                    </article>
+
+                    <!--
+                    ========================================
+                    ADD MORE BARBER CARDS HERE
+                    Copy the article structure above and update:
+                    - data-barber attribute (unique identifier)
+                    - Image src and alt
+                    - Name and title
+                    - Add corresponding modal content below
+                    ========================================
+                    -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SERVICES & PRICING SECTION
+        ======================================== -->
+        <section class="services section section--alt" id="services">
+            <div class="container">
+                <h2 class="section__title fade-in">Services & Pricing</h2>
+                <p class="section__subtitle fade-in">Quality cuts at honest prices</p>
+
+                <!--
+                ========================================
+                PLACEHOLDER PRICES - UPDATE WITH ACTUAL PRICING
+                The prices below are placeholders. Update the
+                service-card__price values with actual pricing.
+                ========================================
+                -->
+                <div class="services__grid">
+                    <div class="service-card fade-in">
+                        <h3 class="service-card__name">Classic Haircut</h3>
+                        <p class="service-card__price">$35</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <h3 class="service-card__name">Skin Fade</h3>
+                        <p class="service-card__price">$40</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <h3 class="service-card__name">Beard Trim</h3>
+                        <p class="service-card__price">$20</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <h3 class="service-card__name">Haircut + Beard</h3>
+                        <p class="service-card__price">$50</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <h3 class="service-card__name">Straight Razor Shave</h3>
+                        <p class="service-card__price">$35</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <h3 class="service-card__name">Kids Haircut</h3>
+                        <span class="service-card__note">12 & under</span>
+                        <p class="service-card__price">$25</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <h3 class="service-card__name">Senior Haircut</h3>
+                        <span class="service-card__note">65+</span>
+                        <p class="service-card__price">$30</p>
+                    </div>
+
+                    <div class="service-card fade-in">
+                        <h3 class="service-card__name">Line Up / Edge Up</h3>
+                        <p class="service-card__price">$15</p>
+                    </div>
+                </div>
+
+                <div class="services__cta fade-in">
+                    <a href="https://www.vagaro.com/theshakyrazorbarbershop" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+                        Book Your Appointment
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             LOCATION & HOURS SECTION
+        ======================================== -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section__title fade-in">Find Us</h2>
+                <p class="section__subtitle fade-in">Drop by or give us a call</p>
+
+                <div class="contact__grid">
+                    <div class="contact__info fade-in">
+                        <div class="contact__block">
+                            <h3 class="contact__heading">Address</h3>
+                            <address class="contact__address">
+                                2438 San Ramon Valley Blvd<br>
+                                San Ramon, CA 94583
+                            </address>
+                        </div>
+
+                        <div class="contact__block">
+                            <h3 class="contact__heading">Phone</h3>
+                            <a href="tel:+19257185995" class="contact__phone">(925) 718-5995</a>
+                        </div>
+
+                        <div class="contact__block">
+                            <h3 class="contact__heading">Hours</h3>
+                            <table class="hours-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Monday</td>
+                                        <td>11 AM – 7 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tuesday</td>
+                                        <td>11 AM – 7 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wednesday</td>
+                                        <td>11 AM – 7 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thursday</td>
+                                        <td>11 AM – 7 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Friday</td>
+                                        <td>11 AM – 7 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saturday</td>
+                                        <td>10 AM – 4 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sunday</td>
+                                        <td>10 AM – 4 PM</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="contact__map fade-in">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5!2d-121.9677!3d37.7652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fee5c3d5a7c8d%3A0x5c8b5e8e8e8e8e8e!2s2438%20San%20Ramon%20Valley%20Blvd%2C%20San%20Ramon%2C%20CA%2094583!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+                            width="100%"
+                            height="400"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="The Shaky Razor Barbershop Location">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <img src="images/Logo.PNG" alt="The Shaky Razor Barbershop" class="footer__logo">
+                </div>
+
+                <div class="footer__links">
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__list">
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#barbers" class="footer__link">Barbers</a></li>
+                        <li><a href="#services" class="footer__link">Services</a></li>
+                        <li><a href="#contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__social">
+                    <h4 class="footer__heading">Follow Us</h4>
+                    <div class="footer__social-links">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/shakyrazorbarbershop" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <!-- Yelp -->
+                        <a href="https://www.yelp.com/biz/the-shaky-razor-barbershop-san-ramon" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Find us on Yelp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.16 12.594l-4.995 1.433c-.96.276-1.74-.8-1.176-1.63l2.905-4.308a1.072 1.072 0 0 1 1.596-.206 9.194 9.194 0 0 1 2.364 3.252 1.073 1.073 0 0 1-.694 1.459zm-3.965 5.985a1.072 1.072 0 0 1-.932 1.378 9.186 9.186 0 0 1-3.953-.38 1.072 1.072 0 0 1-.53-1.514l2.32-4.651c.452-.905 1.768-.648 1.988.388l1.107 4.779zm-8.907-2.96a1.072 1.072 0 0 1-1.378-.932 9.186 9.186 0 0 1 .38-3.953 1.072 1.072 0 0 1 1.514-.53l4.651 2.32c.905.452.648 1.768-.388 1.988l-4.779 1.107zm3.577-7.79l-1.433-4.995a1.072 1.072 0 0 1 .694-1.459 9.194 9.194 0 0 1 3.252-.206 1.072 1.072 0 0 1 .876 1.298L12.82 8.089c-.276.96-1.63.8-1.63-.26v-.001zm-3.19 1.36L3.367 6.88a1.072 1.072 0 0 1-.206-1.596 9.194 9.194 0 0 1 3.252-2.364 1.073 1.073 0 0 1 1.459.694l1.433 4.995c.276.96-.8 1.74-1.63 1.176v.004z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__contact">
+                    <h4 class="footer__heading">Contact</h4>
+                    <address class="footer__address">
+                        2438 San Ramon Valley Blvd<br>
+                        San Ramon, CA 94583<br>
+                        <a href="tel:+19257185995" class="footer__link">(925) 718-5995</a>
+                    </address>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2017–2026 The Shaky Razor Barbershop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         BARBER MODAL
+    ======================================== -->
+    <div class="modal" id="barber-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+            <button class="modal__close" data-close-modal aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal__header">
+                <img src="" alt="" class="modal__image" id="modal-image">
+                <div class="modal__info">
+                    <h2 class="modal__name" id="modal-title"></h2>
+                    <p class="modal__title" id="modal-subtitle"></p>
+                </div>
+            </div>
+
+            <div class="modal__body">
+                <div class="modal__bio" id="modal-bio"></div>
+
+                <div class="modal__gallery">
+                    <h3 class="modal__section-title">Gallery</h3>
+                    <div class="modal__gallery-content" id="modal-gallery">
+                        <!-- Gallery content injected by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__footer">
+                <a href="" class="btn btn--primary btn--large" id="modal-book-btn" target="_blank" rel="noopener noreferrer">
+                    Book with <span id="modal-book-name"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
