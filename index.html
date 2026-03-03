@@ -62,16 +62,32 @@
              FUTURE: Replace background pattern with shop photo/video when available
         ======================================== -->
         <section class="hero" id="home">
-            <!-- Decorative background layers -->
-            <div class="hero__pattern" aria-hidden="true"></div>
-            <div class="hero__noise" aria-hidden="true"></div>
+            <!-- Subtle spotlight vignette -->
             <div class="hero__vignette" aria-hidden="true"></div>
 
+            <!-- Decorative SVG line art - straight razor (left) -->
+            <svg class="hero__lineart hero__lineart--razor" aria-hidden="true" viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="hero__lineart-path" d="M40 10 L40 50 Q40 60 35 65 L20 80 Q15 85 15 95 L15 180 Q15 190 25 190 L35 190 Q45 190 45 180 L45 95 Q45 85 40 80 L25 65 Q20 60 20 50 L20 30 Q20 20 30 15 L40 10" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="hero__lineart-path hero__lineart-path--delayed" d="M25 95 L35 95 M25 110 L35 110 M25 125 L35 125" stroke-width="1" stroke-linecap="round"/>
+                <circle class="hero__lineart-path hero__lineart-path--delayed" cx="30" cy="175" r="5" stroke-width="1"/>
+            </svg>
+
+            <!-- Decorative SVG line art - scissors (right) -->
+            <svg class="hero__lineart hero__lineart--scissors" aria-hidden="true" viewBox="0 0 100 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="hero__lineart-path" cx="30" cy="35" r="15" stroke-width="1.5"/>
+                <circle class="hero__lineart-path" cx="30" cy="165" r="15" stroke-width="1.5"/>
+                <path class="hero__lineart-path hero__lineart-path--delayed" d="M42 45 L85 95 Q90 100 85 105 L42 155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="hero__lineart-path hero__lineart-path--delayed" d="M18 45 L75 100" stroke-width="1.5" stroke-linecap="round"/>
+                <path class="hero__lineart-path hero__lineart-path--delayed" d="M18 155 L75 100" stroke-width="1.5" stroke-linecap="round"/>
+                <circle class="hero__lineart-path" cx="30" cy="35" r="6" stroke-width="1"/>
+                <circle class="hero__lineart-path" cx="30" cy="165" r="6" stroke-width="1"/>
+            </svg>
+
             <div class="hero__content container">
-                <img src="images/Logo.PNG" alt="The Shaky Razor Barbershop" class="hero__logo fade-in">
-                <p class="hero__tagline fade-in">San Ramon's Premier Barbershop Since 2017</p>
-                <address class="hero__address fade-in">2438 San Ramon Valley Blvd, San Ramon, CA 94583</address>
-                <a href="#barbers" class="btn btn--primary btn--large btn--scroll fade-in">
+                <img src="images/Logo.PNG" alt="The Shaky Razor Barbershop" class="hero__logo hero__animate-logo">
+                <p class="hero__tagline hero__animate-tagline">San Ramon's Premier Barbershop Since 2017</p>
+                <address class="hero__address hero__animate-address">2438 San Ramon Valley Blvd, San Ramon, CA 94583</address>
+                <a href="#barbers" class="btn btn--primary btn--large btn--scroll hero__animate-btn">
                     Meet the Barbers
                     <svg class="btn__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
