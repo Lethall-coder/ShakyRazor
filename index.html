@@ -59,16 +59,53 @@
     <main>
         <!-- ========================================
              HERO SECTION
+             FUTURE: Replace background pattern with shop photo/video when available
         ======================================== -->
         <section class="hero" id="home">
+            <!-- Decorative background layers -->
+            <div class="hero__pattern" aria-hidden="true"></div>
+            <div class="hero__noise" aria-hidden="true"></div>
+            <div class="hero__vignette" aria-hidden="true"></div>
+
             <div class="hero__content container">
                 <img src="images/Logo.PNG" alt="The Shaky Razor Barbershop" class="hero__logo fade-in">
                 <p class="hero__tagline fade-in">San Ramon's Premier Barbershop Since 2017</p>
-                <a href="https://www.vagaro.com/theshakyrazorbarbershop" class="btn btn--primary btn--large fade-in" target="_blank" rel="noopener noreferrer">
-                    Book Your Cut
+                <address class="hero__address fade-in">2438 San Ramon Valley Blvd, San Ramon, CA 94583</address>
+                <a href="#barbers" class="btn btn--primary btn--large btn--scroll fade-in">
+                    Meet the Barbers
+                    <svg class="btn__chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
                 </a>
             </div>
         </section>
+
+        <!-- ========================================
+             ABOUT THE SHOP SECTION
+        ======================================== -->
+        <section class="about section" id="about">
+            <div class="container">
+                <!-- Decorative scissors icon -->
+                <div class="section__divider fade-in" aria-hidden="true">
+                    <svg class="section__scissors" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="6" cy="6" r="3"></circle>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                        <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                        <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+                    </svg>
+                </div>
+
+                <h2 class="section__title fade-in">A Cut Above</h2>
+
+                <div class="about__content fade-in">
+                    <p>The Shaky Razor Barbershop was built on a simple idea — that every man deserves a barbershop that feels like home. Since 2017, we've been serving the San Ramon community with precision cuts, straight razor shaves, and the kind of conversation you can only get in a real barbershop. Pull up a chair.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Divider -->
+        <div class="section__gold-line" aria-hidden="true"></div>
 
         <!-- ========================================
              MEET THE BARBERS SECTION
@@ -103,6 +140,9 @@
                 </div>
             </div>
         </section>
+
+        <!-- Section Divider -->
+        <div class="section__gold-line" aria-hidden="true"></div>
 
         <!-- ========================================
              SERVICES & PRICING SECTION
@@ -170,6 +210,9 @@
                 </div>
             </div>
         </section>
+
+        <!-- Section Divider -->
+        <div class="section__gold-line" aria-hidden="true"></div>
 
         <!-- ========================================
              LOCATION & HOURS SECTION

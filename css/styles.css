@@ -141,6 +141,32 @@ ul {
     opacity: 0.9;
 }
 
+/* Section Dividers */
+.section__divider {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section__scissors {
+    color: var(--color-gold);
+    opacity: 0.8;
+}
+
+.section__gold-line {
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--color-gold) 20%,
+        var(--color-gold) 80%,
+        transparent 100%
+    );
+    opacity: 0.4;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 /* ----------------------------------------
    Buttons
    ---------------------------------------- */
@@ -175,6 +201,28 @@ ul {
     font-size: 1rem;
 }
 
+.btn--scroll {
+    gap: var(--spacing-xs);
+}
+
+.btn__chevron {
+    transition: transform var(--transition-normal);
+}
+
+.btn--scroll:hover .btn__chevron {
+    transform: translateY(3px);
+    animation: bounce-down 1s ease infinite;
+}
+
+@keyframes bounce-down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+}
+
 /* ----------------------------------------
    Header / Navigation
    ---------------------------------------- */
@@ -193,7 +241,8 @@ ul {
 
 .header.scrolled {
     background-color: rgba(26, 46, 26, 0.98);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.15);
 }
 
 .nav {
@@ -331,47 +380,165 @@ ul {
    Hero Section
    ---------------------------------------- */
 .hero {
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding-top: var(--header-height);
+    padding-top: calc(var(--header-height) + var(--spacing-xl));
     background: linear-gradient(
         180deg,
         var(--color-primary-dark) 0%,
         var(--color-secondary-green) 100%
     );
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative diagonal pinstripe pattern */
+.hero__pattern {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 20px,
+        rgba(201, 168, 76, 0.03) 20px,
+        rgba(201, 168, 76, 0.03) 21px
+    );
+    pointer-events: none;
+}
+
+/* Subtle noise/grain texture overlay */
+.hero__noise {
+    position: absolute;
+    inset: 0;
+    opacity: 0.4;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+/* Radial vignette / spotlight effect */
+.hero__vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse 80% 60% at 50% 35%,
+        rgba(201, 168, 76, 0.08) 0%,
+        transparent 50%
+    ),
+    radial-gradient(
+        ellipse 100% 100% at 50% 50%,
+        transparent 40%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
+    pointer-events: none;
 }
 
 .hero__content {
     text-align: center;
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0 var(--spacing-xl);
+    position: relative;
+    z-index: 1;
 }
 
 .hero__logo {
-    max-width: 320px;
-    width: 80%;
-    margin: 0 auto var(--spacing-lg);
+    max-width: 280px;
+    width: 75%;
+    margin: 0 auto var(--spacing-md);
+    filter: drop-shadow(0 4px 20px rgba(201, 168, 76, 0.15));
 }
 
 .hero__tagline {
     font-family: var(--font-heading);
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1.1rem, 3.5vw, 1.75rem);
+    color: var(--color-gold);
+    letter-spacing: 0.08em;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero__address {
+    font-family: var(--font-body);
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    font-style: normal;
     color: var(--color-cream);
-    letter-spacing: 0.1em;
-    margin-bottom: var(--spacing-xl);
-    opacity: 0.9;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.8;
 }
 
 @media (min-width: 768px) {
-    .hero__logo {
-        max-width: 400px;
+    .hero {
+        min-height: 85vh;
+        padding-top: calc(var(--header-height) + var(--spacing-3xl));
     }
+
+    .hero__logo {
+        max-width: 360px;
+    }
+
+    .hero__content {
+        padding: var(--spacing-xl) 0 var(--spacing-2xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 100svh;
+        padding-top: calc(var(--header-height) + var(--spacing-lg));
+    }
+
+    .hero__content {
+        padding: var(--spacing-md) 0 var(--spacing-lg);
+    }
+}
+
+/* ----------------------------------------
+   About Section
+   ---------------------------------------- */
+.about {
+    background-color: var(--color-secondary-green);
+    padding: var(--spacing-2xl) 0;
+    position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(
+        180deg,
+        var(--color-secondary-green) 0%,
+        transparent 100%
+    );
+    pointer-events: none;
+    opacity: 0;
+}
+
+.about__content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about__content p {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    line-height: 1.9;
+    color: var(--color-cream);
+    opacity: 0.95;
 }
 
 /* ----------------------------------------
    Barbers Section
    ---------------------------------------- */
+.barbers {
+    background-color: var(--color-primary-dark);
+}
+
 .barbers__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -484,6 +651,10 @@ ul {
 /* ----------------------------------------
    Contact Section
    ---------------------------------------- */
+.contact {
+    background-color: var(--color-primary-dark);
+}
+
 .contact__grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -840,6 +1011,11 @@ ul {
 
     html {
         scroll-behavior: auto;
+    }
+
+    .btn--scroll:hover .btn__chevron {
+        animation: none;
+        transform: none;
     }
 }
 
