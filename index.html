@@ -65,24 +65,6 @@
             <!-- Subtle spotlight vignette -->
             <div class="hero__vignette" aria-hidden="true"></div>
 
-            <!-- Decorative SVG line art - straight razor (left) -->
-            <svg class="hero__lineart hero__lineart--razor" aria-hidden="true" viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="hero__lineart-path" d="M40 10 L40 50 Q40 60 35 65 L20 80 Q15 85 15 95 L15 180 Q15 190 25 190 L35 190 Q45 190 45 180 L45 95 Q45 85 40 80 L25 65 Q20 60 20 50 L20 30 Q20 20 30 15 L40 10" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="hero__lineart-path hero__lineart-path--delayed" d="M25 95 L35 95 M25 110 L35 110 M25 125 L35 125" stroke-width="1" stroke-linecap="round"/>
-                <circle class="hero__lineart-path hero__lineart-path--delayed" cx="30" cy="175" r="5" stroke-width="1"/>
-            </svg>
-
-            <!-- Decorative SVG line art - scissors (right) -->
-            <svg class="hero__lineart hero__lineart--scissors" aria-hidden="true" viewBox="0 0 100 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle class="hero__lineart-path" cx="30" cy="35" r="15" stroke-width="1.5"/>
-                <circle class="hero__lineart-path" cx="30" cy="165" r="15" stroke-width="1.5"/>
-                <path class="hero__lineart-path hero__lineart-path--delayed" d="M42 45 L85 95 Q90 100 85 105 L42 155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="hero__lineart-path hero__lineart-path--delayed" d="M18 45 L75 100" stroke-width="1.5" stroke-linecap="round"/>
-                <path class="hero__lineart-path hero__lineart-path--delayed" d="M18 155 L75 100" stroke-width="1.5" stroke-linecap="round"/>
-                <circle class="hero__lineart-path" cx="30" cy="35" r="6" stroke-width="1"/>
-                <circle class="hero__lineart-path" cx="30" cy="165" r="6" stroke-width="1"/>
-            </svg>
-
             <div class="hero__content container">
                 <img src="images/Logo.PNG" alt="The Shaky Razor Barbershop" class="hero__logo hero__animate-logo">
                 <p class="hero__tagline hero__animate-tagline">San Ramon's Premier Barbershop Since 2017</p>
@@ -93,8 +75,23 @@
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </a>
+
+                <!-- Decorative gold flourish with scissors -->
+                <svg class="hero__flourish hero__animate-flourish" aria-hidden="true" viewBox="0 0 300 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Left scroll line -->
+                    <path d="M10 20 Q30 20 40 15 Q50 10 70 12 Q90 14 100 20 L130 20" stroke="#c9a84c" stroke-width="1" fill="none" stroke-linecap="round"/>
+                    <!-- Right scroll line -->
+                    <path d="M170 20 L200 20 Q210 14 230 12 Q250 10 260 15 Q270 20 290 20" stroke="#c9a84c" stroke-width="1" fill="none" stroke-linecap="round"/>
+                    <!-- Center scissors icon -->
+                    <circle cx="140" cy="14" r="5" stroke="#c9a84c" stroke-width="1" fill="none"/>
+                    <circle cx="160" cy="14" r="5" stroke="#c9a84c" stroke-width="1" fill="none"/>
+                    <path d="M144 17 L156 28 M156 17 L144 28" stroke="#c9a84c" stroke-width="1" stroke-linecap="round"/>
+                </svg>
             </div>
         </section>
+
+        <!-- Section Divider: Hero → About -->
+        <div class="section__gold-line" aria-hidden="true"></div>
 
         <!-- ========================================
              ABOUT THE SHOP SECTION
@@ -292,7 +289,7 @@
 
                     <div class="contact__map fade-in">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5!2d-121.9677!3d37.7652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fee5c3d5a7c8d%3A0x5c8b5e8e8e8e8e8e!2s2438%20San%20Ramon%20Valley%20Blvd%2C%20San%20Ramon%2C%20CA%2094583!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.8!2d-121.9519!3d37.7627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fec3f0f36db15%3A0x2e0d6c7c5f8c8a1b!2s2438%20San%20Ramon%20Valley%20Blvd%2C%20San%20Ramon%2C%20CA%2094583!5e0!3m2!1sen!2sus!4v1709000000000"
                             width="100%"
                             height="400"
                             style="border:0;"
@@ -306,6 +303,9 @@
             </div>
         </section>
     </main>
+
+    <!-- Section Divider: Contact → Footer -->
+    <div class="section__gold-line" aria-hidden="true"></div>
 
     <!-- ========================================
          FOOTER
@@ -341,7 +341,7 @@
                         <!-- Yelp -->
                         <a href="https://www.yelp.com/biz/the-shaky-razor-barbershop-san-ramon" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Find us on Yelp">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.16 12.594l-4.995 1.433c-.96.276-1.74-.8-1.176-1.63l2.905-4.308a1.072 1.072 0 0 1 1.596-.206 9.194 9.194 0 0 1 2.364 3.252 1.073 1.073 0 0 1-.694 1.459zm-3.965 5.985a1.072 1.072 0 0 1-.932 1.378 9.186 9.186 0 0 1-3.953-.38 1.072 1.072 0 0 1-.53-1.514l2.32-4.651c.452-.905 1.768-.648 1.988.388l1.107 4.779zm-8.907-2.96a1.072 1.072 0 0 1-1.378-.932 9.186 9.186 0 0 1 .38-3.953 1.072 1.072 0 0 1 1.514-.53l4.651 2.32c.905.452.648 1.768-.388 1.988l-4.779 1.107zm3.577-7.79l-1.433-4.995a1.072 1.072 0 0 1 .694-1.459 9.194 9.194 0 0 1 3.252-.206 1.072 1.072 0 0 1 .876 1.298L12.82 8.089c-.276.96-1.63.8-1.63-.26v-.001zm-3.19 1.36L3.367 6.88a1.072 1.072 0 0 1-.206-1.596 9.194 9.194 0 0 1 3.252-2.364 1.073 1.073 0 0 1 1.459.694l1.433 4.995c.276.96-.8 1.74-1.63 1.176v.004z"/>
+                                <path d="M12.14 2c-.42.01-1.73.13-2.91 2.45L5.67 10.9c-.55 1.08-.36 1.9.19 2.48.55.57 1.27.63 1.83.63h2.87c.27 0 .44.12.44.38 0 .13-.04.24-.12.38l-2.2 3.47c-.36.57-.32 1.25.1 1.77.42.51 1.06.68 1.68.43l7.46-3.02c.73-.3 1.11-.93 1.03-1.7-.08-.77-.6-1.23-1.38-1.23h-1.8c-.37 0-.54-.2-.54-.45 0-.13.06-.26.16-.38l4.03-4.82c.42-.5.5-1.2.21-1.81-.3-.62-.93-.97-1.67-.97h-.94c-.27 0-.42-.15-.42-.38 0-.13.06-.24.15-.35l1.64-2.13c.37-.48.42-1.1.14-1.64-.28-.55-.82-.88-1.44-.88H12.14z"/>
                             </svg>
                         </a>
                     </div>

@@ -158,12 +158,13 @@ ul {
     background: linear-gradient(
         90deg,
         transparent 0%,
-        var(--color-gold) 20%,
-        var(--color-gold) 80%,
+        var(--color-gold) 15%,
+        var(--color-gold) 85%,
         transparent 100%
     );
-    opacity: 0.4;
-    max-width: 600px;
+    opacity: 0.35;
+    width: 70%;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -412,47 +413,24 @@ ul {
     pointer-events: none;
 }
 
-/* Decorative SVG line art */
-.hero__lineart {
-    position: absolute;
-    height: 180px;
-    width: auto;
-    stroke: var(--color-gold);
-    opacity: 0.15;
-    pointer-events: none;
-    top: 50%;
-    transform: translateY(-50%);
+/* Decorative gold flourish below button */
+.hero__flourish {
+    width: 280px;
+    max-width: 80%;
+    height: auto;
+    margin-top: var(--spacing-xl);
+    opacity: 0.6;
 }
 
-.hero__lineart--razor {
-    left: 12%;
+.hero__animate-flourish {
+    opacity: 0;
+    animation: hero-fade-up 0.8s ease-out 1s forwards;
 }
 
-.hero__lineart--scissors {
-    right: 12%;
-}
-
-.hero__lineart-path {
-    fill: none;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: draw-line 2.5s ease-out 0.5s forwards;
-}
-
-.hero__lineart-path--delayed {
-    animation-delay: 1s;
-}
-
-@keyframes draw-line {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-/* Hide line art on mobile */
-@media (max-width: 900px) {
-    .hero__lineart {
-        display: none;
+@media (max-width: 480px) {
+    .hero__flourish {
+        width: 220px;
+        margin-top: var(--spacing-lg);
     }
 }
 
@@ -469,7 +447,12 @@ ul {
     max-width: 300px;
     width: 75%;
     margin: 0 auto var(--spacing-md);
-    /* No background, border, or box-shadow - just the transparent PNG */
+    /* Explicitly ensure no box behind logo - transparent PNG floats on background */
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
 }
 
 .hero__tagline {
@@ -565,16 +548,15 @@ ul {
     .hero__animate-logo,
     .hero__animate-tagline,
     .hero__animate-address,
-    .hero__animate-btn {
+    .hero__animate-btn,
+    .hero__animate-flourish {
         opacity: 1;
         transform: none;
         animation: none;
     }
 
-    .hero__lineart-path {
-        stroke-dasharray: none;
-        stroke-dashoffset: 0;
-        animation: none;
+    .hero__flourish {
+        opacity: 0.6;
     }
 }
 
@@ -627,17 +609,24 @@ ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-lg);
-    max-width: 900px;
+    max-width: 400px;
     margin: 0 auto;
+}
+
+/* When multiple barbers, expand grid */
+.barbers__grid:has(.barber-card:nth-child(2)) {
+    max-width: 900px;
 }
 
 .barber-card {
     background-color: var(--color-secondary-green);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     overflow: hidden;
     cursor: pointer;
     transition: all var(--transition-normal);
     border: 2px solid transparent;
+    max-width: 380px;
+    margin: 0 auto;
 }
 
 .barber-card:hover,
@@ -650,14 +639,16 @@ ul {
 
 .barber-card__image-wrapper {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 3 / 4;
     overflow: hidden;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
 .barber-card__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
     transition: transform var(--transition-slow);
 }
 
@@ -813,6 +804,7 @@ ul {
 
 .contact__map iframe {
     display: block;
+    min-height: 380px;
 }
 
 /* ----------------------------------------
@@ -820,7 +812,6 @@ ul {
    ---------------------------------------- */
 .footer {
     background-color: var(--color-primary-dark);
-    border-top: 1px solid var(--color-secondary-green);
     padding: var(--spacing-xl) 0 var(--spacing-lg);
 }
 
@@ -839,6 +830,10 @@ ul {
 
 .footer__logo {
     max-width: 150px;
+    /* Ensure no box behind logo - transparent PNG floats on background */
+    background: none;
+    border: none;
+    box-shadow: none;
 }
 
 .footer__heading {
