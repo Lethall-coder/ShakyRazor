@@ -20,6 +20,16 @@
 </head>
 <body>
     <!-- ========================================
+         INFO TOP BAR
+    ======================================== -->
+    <div class="info-bar">
+        <div class="info-bar__content container">
+            <span class="info-bar__address">2438 San Ramon Valley Blvd, San Ramon, CA 94583</span>
+            <span class="info-bar__notice">Cash &amp; Appointments Only</span>
+        </div>
+    </div>
+
+    <!-- ========================================
          HEADER / NAVIGATION
     ======================================== -->
     <header class="header" id="header">
@@ -76,17 +86,6 @@
                     </svg>
                 </a>
 
-                <!-- Decorative gold flourish with scissors -->
-                <svg class="hero__flourish hero__animate-flourish" aria-hidden="true" viewBox="0 0 300 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Left scroll line -->
-                    <path d="M10 20 Q30 20 40 15 Q50 10 70 12 Q90 14 100 20 L130 20" stroke="#c9a84c" stroke-width="1" fill="none" stroke-linecap="round"/>
-                    <!-- Right scroll line -->
-                    <path d="M170 20 L200 20 Q210 14 230 12 Q250 10 260 15 Q270 20 290 20" stroke="#c9a84c" stroke-width="1" fill="none" stroke-linecap="round"/>
-                    <!-- Center scissors icon -->
-                    <circle cx="140" cy="14" r="5" stroke="#c9a84c" stroke-width="1" fill="none"/>
-                    <circle cx="160" cy="14" r="5" stroke="#c9a84c" stroke-width="1" fill="none"/>
-                    <path d="M144 17 L156 28 M156 17 L144 28" stroke="#c9a84c" stroke-width="1" stroke-linecap="round"/>
-                </svg>
             </div>
         </section>
 
@@ -162,58 +161,68 @@
         ======================================== -->
         <section class="services section section--alt" id="services">
             <div class="container">
-                <h2 class="section__title fade-in">Services & Pricing</h2>
+                <h2 class="section__title fade-in">Services &amp; Pricing</h2>
                 <p class="section__subtitle fade-in">Quality cuts at honest prices</p>
 
-                <!--
-                ========================================
-                PLACEHOLDER PRICES - UPDATE WITH ACTUAL PRICING
-                The prices below are placeholders. Update the
-                service-card__price values with actual pricing.
-                ========================================
-                -->
-                <div class="services__grid">
-                    <div class="service-card fade-in">
-                        <h3 class="service-card__name">Classic Haircut</h3>
-                        <p class="service-card__price">$35</p>
+                <div class="price-menu fade-in">
+                    <div class="price-menu__item">
+                        <span class="price-menu__name">Haircut</span>
+                        <span class="price-menu__dots" aria-hidden="true"></span>
+                        <span class="price-menu__price">$45</span>
+                    </div>
+                    <div class="price-menu__item">
+                        <span class="price-menu__name">Beard Trim</span>
+                        <span class="price-menu__dots" aria-hidden="true"></span>
+                        <span class="price-menu__price">$30</span>
+                    </div>
+                    <div class="price-menu__item">
+                        <span class="price-menu__name">Buzz Cut</span>
+                        <span class="price-menu__dots" aria-hidden="true"></span>
+                        <span class="price-menu__price">$30</span>
+                    </div>
+                    <div class="price-menu__item">
+                        <span class="price-menu__name">Senior Cut</span>
+                        <span class="price-menu__dots" aria-hidden="true"></span>
+                        <span class="price-menu__price">$30</span>
+                    </div>
+                    <div class="price-menu__item">
+                        <span class="price-menu__name">Shave</span>
+                        <span class="price-menu__dots" aria-hidden="true"></span>
+                        <span class="price-menu__price">$60</span>
+                    </div>
+                    <div class="price-menu__item">
+                        <span class="price-menu__name">Long Cut</span>
+                        <span class="price-menu__dots" aria-hidden="true"></span>
+                        <span class="price-menu__price">$60</span>
                     </div>
 
-                    <div class="service-card fade-in">
-                        <h3 class="service-card__name">Skin Fade</h3>
-                        <p class="service-card__price">$40</p>
+                    <!-- Ornamental divider -->
+                    <div class="price-menu__divider" aria-hidden="true">
+                        <span class="price-menu__divider-line"></span>
+                        <span class="price-menu__divider-ornament">&#9670;</span>
+                        <span class="price-menu__divider-line"></span>
                     </div>
 
-                    <div class="service-card fade-in">
-                        <h3 class="service-card__name">Beard Trim</h3>
-                        <p class="service-card__price">$20</p>
+                    <h3 class="price-menu__combo-heading">
+                        <span class="price-menu__combo-line"></span>
+                        Combo Pack
+                        <span class="price-menu__combo-line"></span>
+                    </h3>
+
+                    <div class="price-menu__item">
+                        <span class="price-menu__name">Combo Shave</span>
+                        <span class="price-menu__dots" aria-hidden="true"></span>
+                        <span class="price-menu__price">$110</span>
+                    </div>
+                    <div class="price-menu__item">
+                        <span class="price-menu__name">Haircut &amp; Beard</span>
+                        <span class="price-menu__dots" aria-hidden="true"></span>
+                        <span class="price-menu__price">$70</span>
                     </div>
 
-                    <div class="service-card fade-in">
-                        <h3 class="service-card__name">Haircut + Beard</h3>
-                        <p class="service-card__price">$50</p>
-                    </div>
-
-                    <div class="service-card fade-in">
-                        <h3 class="service-card__name">Straight Razor Shave</h3>
-                        <p class="service-card__price">$35</p>
-                    </div>
-
-                    <div class="service-card fade-in">
-                        <h3 class="service-card__name">Kids Haircut</h3>
-                        <span class="service-card__note">12 & under</span>
-                        <p class="service-card__price">$25</p>
-                    </div>
-
-                    <div class="service-card fade-in">
-                        <h3 class="service-card__name">Senior Haircut</h3>
-                        <span class="service-card__note">65+</span>
-                        <p class="service-card__price">$30</p>
-                    </div>
-
-                    <div class="service-card fade-in">
-                        <h3 class="service-card__name">Line Up / Edge Up</h3>
-                        <p class="service-card__price">$15</p>
-                    </div>
+                    <!-- Cash & Appointments note -->
+                    <div class="price-menu__note-divider" aria-hidden="true"></div>
+                    <p class="price-menu__note">Cash &amp; Appointments Only</p>
                 </div>
 
                 <div class="services__cta fade-in">
@@ -289,7 +298,7 @@
 
                     <div class="contact__map fade-in">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.8!2d-121.9519!3d37.7627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fec3f0f36db15%3A0x2e0d6c7c5f8c8a1b!2s2438%20San%20Ramon%20Valley%20Blvd%2C%20San%20Ramon%2C%20CA%2094583!5e0!3m2!1sen!2sus!4v1709000000000"
+                            src="https://maps.google.com/maps?q=2438+San+Ramon+Valley+Blvd,+San+Ramon,+CA+94583&z=15&output=embed"
                             width="100%"
                             height="400"
                             style="border:0;"
@@ -341,7 +350,7 @@
                         <!-- Yelp -->
                         <a href="https://www.yelp.com/biz/the-shaky-razor-barbershop-san-ramon" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Find us on Yelp">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12.14 2c-.42.01-1.73.13-2.91 2.45L5.67 10.9c-.55 1.08-.36 1.9.19 2.48.55.57 1.27.63 1.83.63h2.87c.27 0 .44.12.44.38 0 .13-.04.24-.12.38l-2.2 3.47c-.36.57-.32 1.25.1 1.77.42.51 1.06.68 1.68.43l7.46-3.02c.73-.3 1.11-.93 1.03-1.7-.08-.77-.6-1.23-1.38-1.23h-1.8c-.37 0-.54-.2-.54-.45 0-.13.06-.26.16-.38l4.03-4.82c.42-.5.5-1.2.21-1.81-.3-.62-.93-.97-1.67-.97h-.94c-.27 0-.42-.15-.42-.38 0-.13.06-.24.15-.35l1.64-2.13c.37-.48.42-1.1.14-1.64-.28-.55-.82-.88-1.44-.88H12.14z"/>
+                                <path d="m7.6885 15.1415-3.6715.8483c-.3769.0871-.755.183-1.1452.155-.2611-.0188-.5122-.0414-.7606-.213a1.179 1.179 0 0 1-.331-.3594c-.3486-.5519-.3656-1.3661-.3697-2.0004a6.2874 6.2874 0 0 1 .3314-2.0642c.0311-.0853.067-.1676.1073-.2474a2.3426 2.3426 0 0 1 .1255-.2165 2.4572 2.4572 0 0 1 .1563-.1975 1.1736 1.1736 0 0 1 .399-.2831 1.082 1.082 0 0 1 .4592-.0837c.2355.0016.5139.052.91.1734l.1856.0572c.3277.1013.7048.2404 1.1499.3987.6863.2404 1.3663.487 2.0463.7397l1.2117.4423c.2217.0807.4363.18.6412.297.174.0984.3273.2298.4512.387a1.217 1.217 0 0 1 .192.4309 1.2205 1.2205 0 0 1-.872 1.4522c-.0468.0151-.0852.0239-.1085.0293l-1.105.2553zM18.8208 7.565a1.8506 1.8506 0 0 0-.2042-.1754 2.4082 2.4082 0 0 0-.2077-.1394 2.3607 2.3607 0 0 0-.2269-.109 1.1705 1.1705 0 0 0-.482-.0796 1.0862 1.0862 0 0 0-.4498.1263c-.2107.1048-.4388.2732-.742.5551l-.142.133c-.2502.2351-.5286.5252-.8599.863-.5064.52-1.0116 1.04-1.5166 1.5629l-.8962.9293a4.1897 4.1897 0 0 0-.4466.5483 1.541 1.541 0 0 0-.2364.5459 1.2199 1.2199 0 0 0 .0107.4518l.0046.02a1.218 1.218 0 0 0 1.4184.923l.1105-.0213 4.7781-1.104c.3766-.087.7587-.1667 1.097-.3631.2269-.1316.4428-.262.5909-.5252a1.1793 1.1793 0 0 0 .1405-.4683c.0733-.6512-.2668-1.3908-.5403-1.963a6.2792 6.2792 0 0 0-1.2001-1.7103zM8.9703.0754a8.6724 8.6724 0 0 0-.83.1564c-.2754.066-.548.1383-.8146.2236-.868.2844-2.0884.8063-2.295 1.8065-.1165.5655.1595 1.1439.3737 1.66.2595.6254.614 1.1889.9373 1.7777.8543 1.5545 1.7245 3.0993 2.5922 4.6457.259.4617.5416 1.0464 1.043 1.2856a1.058 1.058 0 0 0 .1013.0383c.2248.0851.4699.1016.7041.0471l.0418-.0097a1.2136 1.2136 0 0 0 .5658-.3397 1.1033 1.1033 0 0 0 .079-.0822c.3463-.435.3454-1.0833.3764-1.6134.1042-1.771.2139-3.5423.3009-5.3142.0332-.6712.1055-1.3333.0655-2.0096-.0328-.5579-.0368-1.1984-.3891-1.6563-.6218-.8073-1.9476-.741-2.8523-.6158zm2.084 15.9505a1.1053 1.1053 0 0 0-1.2306-.4145 1.1398 1.1398 0 0 0-.1526.0633 1.4806 1.4806 0 0 0-.2171.1354c-.1992.1475-.3668.3392-.5196.5315l-.12.1562-.7686 1.0573c-.4307.5934-.8615 1.189-1.2913 1.789-.278.3895-.5184.7184-.7083 1.0094l-.1075.1647c-.2277.3522-.3566.6092-.4228.8381a1.0945 1.0945 0 0 0-.046.4721c.0211.1655.0768.3246.1635.467.046.0715.0957.1406.1487.207a2.334 2.334 0 0 0 .1754.1825c.0673.0605.1381.1184.2108.1732.5304.369 1.1112.6342 1.722.8391a6.0958 6.0958 0 0 0 1.5716.3004c.091.0046.1821.0025.2728-.006a2.3878 2.3878 0 0 0 .2506-.0351 2.3862 2.3862 0 0 0 .2447-.071 1.1927 1.1927 0 0 0 .4175-.2658c.1127-.113.1994-.249.2541-.3989.0889-.2214.1473-.5026.1857-.92l.0177-.1958c.0304-.3463.0443-.7531.0666-1.2315.0375-.7357.067-1.4681.0903-2.2026l.0494-1.306c.0113-.3008.002-.6342-.0814-.9336a1.396 1.396 0 0 0-.1756-.4054zm8.6754 2.0439c-.1605-.176-.3878-.3514-.7462-.5682l-.1684-.1009c-.2985-.1795-.658-.3684-1.078-.5965a120.7615 120.7615 0 0 0-1.9427-1.042l-1.1515-.6107-.1766-.0878c-.2212-.1058-.4558-.2045-.6992-.2498a1.4915 1.4915 0 0 0-.2545-.0265 1.1527 1.1527 0 0 0-.1648.01 1.1077 1.1077 0 0 0-.9227.9133 1.4186 1.4186 0 0 0 .0159.439c.0563.3065.1932.6096.3346.875l.615 1.1526c.3422.65.6884 1.2963 1.0435 1.9406.229.4202.4196.7799.5982 1.078l.1011.1682c.2173.3584.392.584.569.7458.1146.1107.252.195.4026.247.1583.0525.326.071.4919.0546a2.368 2.368 0 0 0 .251-.0435c.0817-.022.1622-.048.241-.0784a1.863 1.863 0 0 0 .2475-.1143 6.1018 6.1018 0 0 0 1.2818-.9597c.4596-.4522.8659-.9454 1.182-1.51.044-.08.0819-.163.1138-.2483a2.49 2.49 0 0 0 .0773-.2411c.0186-.083.033-.1669.0429-.2513a1.188 1.188 0 0 0-.0565-.491 1.0933 1.0933 0 0 0-.248-.4041z"/>
                             </svg>
                         </a>
                     </div>
@@ -397,7 +406,7 @@
 
             <div class="modal__footer">
                 <a href="" class="btn btn--primary btn--large" id="modal-book-btn" target="_blank" rel="noopener noreferrer">
-                    Book with <span id="modal-book-name"></span>
+                    Book with&nbsp;<span id="modal-book-name"></span>
                 </a>
             </div>
         </div>
